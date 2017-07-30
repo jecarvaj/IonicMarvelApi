@@ -1,14 +1,32 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+<ion-header >
+
+  <ion-navbar  color="primary">
+    <ion-searchbar [placeholder]='placeholder'   *ngIf="searchBarStatusCheck" [showCancelButton]="true" (ionCancel)="cancelBar()"  (ionInput)="searchData($event)" [debounce]="800" ></ion-searchbar>
+    <ion-buttons start>
+      <button ion-button icon-only color="royal" (click)="showBar()">
+       <ion-icon name="search" ></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title *ngIf="!searchBarStatusCheck" >Marvel Comics</ion-title>
+
+
+
+
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+<ion-content class="card-background-page">
+
+  <ion-card *ngFor="let comic of comics " (click)="goToDetail(comic)">
+    <img src="{{comic.thumbnail.path+'/standard_fantastic.jpg'}}"/>
+    <div class="card-title">{{comic.title}}</div>
+  </ion-card>
+
+  <ion-infinite-scroll  (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
 </ion-content>
