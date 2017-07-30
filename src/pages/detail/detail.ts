@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import {IonicPage, NavController, NavParams, Platform} from 'ionic-angular';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {ApiServiceProvider} from "../../providers/api-service/api-service";
 import { InAppBrowser} from "@ionic-native/in-app-browser"
 
-declare var window: any;
+
 
 /**
  * Generated class for the DetailPage page.
@@ -20,7 +20,7 @@ declare var window: any;
 export class DetailPage {
   comic;
   characters:any[]=[];
-  cordova: any;
+
 
   constructor(public navCtrl: NavController, public apiService: ApiServiceProvider, private iab: InAppBrowser,public navParams: NavParams) {
     this.comic=this.navParams.get('id');
