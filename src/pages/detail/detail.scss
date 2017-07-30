@@ -1,0 +1,12 @@
+page-detail {
+
+  .content-detail{
+    color: map_get($colors, light);
+    background: map_get($colors, secondary) ;
+  }
+
+  .dark-background{
+    background: map_get($colors, secondary) ;
+    color: map_get($colors, light);
+  }
+}
