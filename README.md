@@ -8,8 +8,8 @@ hulk 1992      -> Devuelve los comics que comiencen con "Hulk" y que sean del a�
 1992 hulk      -> Mismo resultado anterior
 ```
 
-#### IMPORTANTE => Al abrir desde el navegador, hacerlo sin ``HTTPS``. SOLO CON ``HTTP``.
-#### Debido a que Marvel entrega varias de sus imágenes con ``HTTP`` y podrían no verse según el navegador
+#### IMPORTANTE => Debido a que Marvel entrega varias de sus imágenes con ``HTTP``, algunas podrían no verse al abrir la app con ``HTTPS``
+#### Se recomienda al abrir desde el navegador, hacerlo sin ``HTTPS``. SOLO CON ``HTTP``. 
 
 
 [Data provided by Marvel. © 2017 MARVEL](https://marvel.com)
